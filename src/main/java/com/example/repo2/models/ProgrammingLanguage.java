@@ -1,17 +1,16 @@
 package com.example.repo2.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class ProgrammingLanguage {
     @Id
     @GeneratedValue
     private Long id;
-
+    @Column(nullable = false)
     private String name;
     private Integer firstAppearance;
+    @Column(nullable = false)
     private String inventor;
 
     public ProgrammingLanguage() {
